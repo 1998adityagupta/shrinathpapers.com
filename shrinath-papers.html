@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="robots" content="index, follow" />
+  <title>Shrinath Papers — Paper Trading & Stationery Manufacturers, Indore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:    #0D1B2A;
+      --navy-mid:#162236;
+      --brass:   #B8922A;
+      --brass-lt:#D4AA4A;
+      --offwhite:#F5F2EC;
+      --warm-gray:#C8C2B6;
+      --text-muted:#8A8378;
+      --white:   #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--offwhite); color: var(--navy); font-size: 16px; line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 64px;
+      background: rgba(13,27,42,0.97); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(184,146,42,0.25);
+    }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--white); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--brass); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--warm-gray); font-size: 0.85rem; font-weight: 600; text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--brass-lt); }
+    .nav-cta { background: var(--brass); color: var(--navy); padding: 0.45rem 1.1rem; border-radius: 2px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--brass-lt); }
+
+    /* HERO */
+    .hero { min-height: 100svh; background: var(--navy); display: flex; align-items: center; padding: 90px 5vw 60px; position: relative; overflow: hidden; }
+    .hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(184,146,42,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(184,146,42,0.06) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+    .hero-accent-line { position: absolute; top: 0; left: 5vw; width: 2px; height: 100%; background: linear-gradient(to bottom, var(--brass), transparent); opacity: 0.4; }
+    .hero-content { position: relative; max-width: 680px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); margin-bottom: 1.5rem; }
+    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--brass); }
+    .hero-heading { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.4rem, 6vw, 5.5rem); font-weight: 800; line-height: 1.0; color: var(--white); letter-spacing: -0.01em; margin-bottom: 1.25rem; }
+    .hero-heading .accent { color: var(--brass); }
+    .hero-sub { font-size: clamp(0.92rem, 2.5vw, 1.1rem); color: var(--warm-gray); font-weight: 300; max-width: 520px; line-height: 1.7; margin-bottom: 2rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--brass); color: var(--navy); padding: 0.85rem 2rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.2s, transform 0.15s; display: inline-block; }
+    .btn-primary:hover { background: var(--brass-lt); transform: translateY(-1px); }
+    .btn-ghost { border: 1px solid rgba(200,194,182,0.4); color: var(--warm-gray); padding: 0.85rem 2rem; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: var(--brass); color: var(--brass-lt); }
+    .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; flex-wrap: wrap; border-top: 1px solid rgba(200,194,182,0.15); padding-top: 2rem; }
+    .stat-item { text-align: left; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--white); line-height: 1; }
+    .stat-num span { color: var(--brass); }
+    .stat-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.2rem; }
+
+    section { padding: clamp(50px, 8vw, 90px) 5vw; }
+    .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+    .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--brass); }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.75rem, 4vw, 3rem); font-weight: 800; color: var(--navy); letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 1rem; }
+    .section-body { font-size: clamp(0.9rem, 2vw, 1rem); color: #4A4540; max-width: 560px; line-height: 1.75; }
+
+    /* ABOUT */
+    .about { background: var(--white); }
+    .about-layout { max-width: 780px; }
+    .about-highlights { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .highlight-row { display: flex; flex-direction: column; gap: 0.75rem; background: var(--offwhite); border-radius: 4px; padding: 1.25rem; border-left: 3px solid var(--brass); }
+    .highlight-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(184,146,42,0.1); border-radius: 2px; display: flex; align-items: center; justify-content: center; color: var(--brass); }
+    .highlight-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .highlight-desc { font-size: 0.85rem; color: #6A635C; line-height: 1.55; }
+    @media (max-width: 640px) { .about-highlights { grid-template-columns: 1fr; } }
+
+    /* PRODUCTS */
+    .products { background: var(--offwhite); }
+    .products-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    @media (min-width: 768px) { .products-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+    .product-card { background: var(--white); border-radius: 3px; overflow: hidden; border: 1px solid rgba(200,194,182,0.5); transition: transform 0.2s, box-shadow 0.2s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(13,27,42,0.1); }
+    .product-banner { height: 90px; display: flex; align-items: flex-end; justify-content: space-between; padding: 0 1.25rem 0.85rem; position: relative; overflow: hidden; }
+    .product-banner::before { content: ''; position: absolute; inset: 0; opacity: 0.06; background-image: linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px); background-size: 18px 18px; }
+    .product-banner.c1 { background: linear-gradient(135deg, #1A2E45, #0D1B2A); }
+    .product-banner.c2 { background: linear-gradient(135deg, #2A1F0D, #3D2E12); }
+    .product-banner.c3 { background: linear-gradient(135deg, #1A2A1A, #0F1F0F); }
+    .product-banner.c4 { background: linear-gradient(135deg, #2A1A2A, #1A0D1F); }
+    .product-banner-label { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; color: rgba(255,255,255,0.9); letter-spacing: 0.04em; text-transform: uppercase; position: relative; }
+    .product-banner-gsm { font-size: 0.68rem; font-weight: 600; color: var(--brass); letter-spacing: 0.08em; text-transform: uppercase; position: relative; }
+    .product-info { padding: 1.25rem; }
+    .product-name { font-weight: 700; font-size: 1rem; margin-bottom: 0.3rem; }
+    .product-desc { font-size: 0.83rem; color: #6A635C; line-height: 1.5; }
+    .product-tag { display: inline-block; margin-top: 0.75rem; background: rgba(184,146,42,0.12); color: var(--brass); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 2px; }
+
+    /* WHY */
+    .why { background: var(--navy); }
+    .why .section-title { color: var(--white); }
+    .why-grid { display: grid; grid-template-columns: 1fr; gap: 2px; margin-top: 2rem; }
+    @media (min-width: 600px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .why-grid { grid-template-columns: repeat(4, 1fr); } }
+    .why-item { background: var(--navy-mid); padding: 2rem 1.75rem; border-top: 2px solid transparent; transition: border-color 0.2s; }
+    .why-item:hover { border-color: var(--brass); }
+    .why-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.5rem; font-weight: 800; color: rgba(184,146,42,0.25); line-height: 1; margin-bottom: 1rem; }
+    .why-title { font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+    .why-desc { font-size: 0.88rem; color: var(--warm-gray); line-height: 1.65; }
+
+    /* PENKRAFT ASSOCIATE BRAND STRIP */
+    .penkraft-strip { background: var(--offwhite); border-top: 1px solid rgba(184,146,42,0.2); border-bottom: 1px solid rgba(184,146,42,0.2); padding: 22px 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+    .penkraft-strip-left { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .penkraft-strip-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+    .penkraft-strip-divider { width: 1px; height: 24px; background: var(--warm-gray); flex-shrink: 0; }
+    .penkraft-strip-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--navy); letter-spacing: 0.02em; line-height: 1; }
+    .penkraft-strip-name span { color: var(--brass); }
+    .penkraft-strip-tagline { font-size: 0.75rem; color: var(--text-muted); font-style: italic; margin-top: 0.15rem; }
+    .penkraft-strip-link { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brass); text-decoration: none; border-bottom: 1px solid rgba(184,146,42,0.4); padding-bottom: 1px; transition: color 0.2s; white-space: nowrap; }
+    .penkraft-strip-link:hover { color: var(--brass-lt); }
+
+    .enquiry-strip { background: var(--brass); padding: clamp(36px, 6vw, 60px) 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .enquiry-strip h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 800; color: var(--navy); line-height: 1.1; }
+    .enquiry-strip p { color: rgba(13,27,42,0.7); margin-top: 0.4rem; font-size: 0.95rem; }
+    .btn-dark { background: var(--navy); color: var(--white); padding: 0.9rem 2.2rem; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.2s; flex-shrink: 0; display: inline-block; }
+    .btn-dark:hover { background: var(--navy-mid); }
+
+    /* CONTACT */
+    .contact { background: var(--white); }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem; display: block; }
+    input, select, textarea { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--warm-gray); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: var(--navy); background: var(--offwhite); transition: border-color 0.2s; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--brass); }
+    textarea { resize: vertical; min-height: 120px; }
+    .form-submit { background: var(--navy); color: var(--white); border: none; cursor: pointer; padding: 0.9rem 2.2rem; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 2px; transition: background 0.2s; align-self: flex-start; }
+    .form-submit:hover { background: var(--navy-mid); }
+    .contact-info { padding-top: 0.5rem; }
+    .contact-detail { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+    .contact-icon { width: 40px; height: 40px; flex-shrink: 0; background: rgba(184,146,42,0.1); border-radius: 2px; display: flex; align-items: center; justify-content: center; color: var(--brass); }
+    .contact-detail-title { font-weight: 700; font-size: 0.9rem; }
+    .contact-detail-val { font-size: 0.9rem; color: #6A635C; margin-top: 0.2rem; }
+    .map-link-btn { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.25rem; background: var(--offwhite); border: 1px solid var(--warm-gray); color: var(--navy); padding: 0.75rem 1.25rem; border-radius: 2px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
+    .map-link-btn:hover { background: rgba(184,146,42,0.08); border-color: var(--brass); color: var(--brass); }
+
+    /* FOOTER */
+    footer { background: var(--navy); padding: 50px 5vw 30px; }
+    .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 3rem; margin-bottom: 2.5rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--text-muted); max-width: 260px; line-height: 1.65; margin-top: 0.75rem; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { font-size: 0.88rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--warm-gray); }
+    .footer-bottom { border-top: 1px solid rgba(200,194,182,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      /* Nav */
+      nav { padding: 0 4vw; height: 56px; }
+      .nav-links { display: none; }
+      .nav-logo { font-size: 1.1rem; }
+      .nav-cta { padding: 0.4rem 0.9rem; font-size: 0.78rem; }
+
+      /* Hero */
+      .hero { padding: 76px 5vw 48px; align-items: flex-start; min-height: 100svh; }
+      .hero-accent-line { display: none; }
+      .hero-eyebrow { font-size: 0.7rem; margin-bottom: 1rem; }
+      .hero-sub { font-size: 0.92rem; margin-bottom: 1.5rem; }
+      .btn-primary, .btn-ghost { padding: 0.75rem 1.4rem; font-size: 0.82rem; }
+      .hero-stats { gap: 1.5rem; margin-top: 2rem; padding-top: 1.5rem; }
+      .stat-num { font-size: 1.8rem; }
+      .stat-label { font-size: 0.62rem; }
+
+      /* About */
+      .about-layout { gap: 1.5rem; }
+
+      /* Products */
+      .products-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .products-header .btn-primary { width: 100%; text-align: center; }
+
+      /* Why */
+      .why-item { padding: 1.5rem 1.25rem; }
+      .why-num { font-size: 2rem; margin-bottom: 0.6rem; }
+
+      /* Contact */
+      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; gap: 0.75rem; }
+      .form-submit { width: 100%; text-align: center; }
+
+      /* Footer */
+      .footer-top { gap: 2rem; }
+      .footer-col { min-width: 120px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+
+      /* Enquiry */
+      .enquiry-strip { padding: 36px 5vw; }
+      .btn-dark { width: 100%; text-align: center; }
+    }
+
+    @media (max-width: 400px) {
+      .hero-heading { font-size: 2.1rem; }
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">SHRINATH <span>PAPERS</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-accent-line"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Indore · Madhya Pradesh · India</div>
+    <h1 class="hero-heading">
+      Paper Trading &amp;<br>
+      <span class="accent">Paper Stationery</span><br>
+      Manufacturers.
+    </h1>
+    <p class="hero-sub">
+      Indore's trusted name in paper trading — supplying quality paper to printers, publishers, and businesses, while manufacturing stationery products under our own brand. Reliable stock, competitive pricing, and 30 years of paper expertise.
+    </p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">Explore Products</a>
+      <a href="#contact" class="btn-ghost">Request a Quote</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">30<span>+</span></div>
+        <div class="stat-label">Years of Trading</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">400<span>+</span></div>
+        <div class="stat-label">B2B Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">50<span>+</span></div>
+        <div class="stat-label">Paper Varieties</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-layout">
+    <div class="section-eyebrow">Our Story</div>
+    <h2 class="section-title">30 years of trusted paper supply</h2>
+    <p class="section-body">
+      Shrinath Papers is an Indore-based paper trading company and stationery manufacturer serving the printing, publishing, and packaging industries across Madhya Pradesh and beyond. With over three decades in the trade, we source from reputed mills and authorised distributors to bring you consistent quality, competitive pricing, and reliable timelines — batch after batch.
+    </p>
+    <div class="about-highlights">
+      <div class="highlight-row">
+        <div class="highlight-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="highlight-title">Trusted Sourcing</div>
+          <div class="highlight-desc">Paper sourced from reputed mills and authorised distributors. Consistent GSM, brightness, and shade — every lot.</div>
+        </div>
+      </div>
+      <div class="highlight-row">
+        <div class="highlight-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div>
+          <div class="highlight-title">On-Time Delivery</div>
+          <div class="highlight-desc">Indore-based warehousing with fast dispatch across central India.</div>
+        </div>
+      </div>
+      <div class="highlight-row">
+        <div class="highlight-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div>
+          <div class="highlight-title">Flexible Order Sizes</div>
+          <div class="highlight-desc">From single reams to full truck loads — we accommodate your scale.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="products-header">
+    <div>
+      <div class="section-eyebrow">What We Supply</div>
+      <h2 class="section-title">Our Paper Range</h2>
+    </div>
+    <a href="#contact" class="btn-primary">Enquire About Any Grade</a>
+  </div>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-banner c1">
+        <span class="product-banner-label">Maplitho</span>
+        <span class="product-banner-gsm">60–120 GSM</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Maplitho / Offset Paper</div>
+        <div class="product-desc">High brightness, excellent printability. Available in 60–120 GSM for books, forms, and stationery.</div>
+        <span class="product-tag">Printing</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-banner c2">
+        <span class="product-banner-label">Art Paper</span>
+        <span class="product-banner-gsm">90–300 GSM</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Art Paper & Art Card</div>
+        <div class="product-desc">Premium coated sheets with gloss/matte finish for brochures, packaging, and high-end print runs.</div>
+        <span class="product-tag">Packaging</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-banner c3">
+        <span class="product-banner-label">Copier</span>
+        <span class="product-banner-gsm">70–90 GSM</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Copier & Bond Paper</div>
+        <div class="product-desc">Crisp, jam-free sheets for office copiers and laser printers. A4 and custom cut sizes available.</div>
+        <span class="product-tag">Office</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-banner c4">
+        <span class="product-banner-label">Specialty</span>
+        <span class="product-banner-gsm">Various GSM</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Specialty Paper</div>
+        <div class="product-desc">Coloured, textured, and specialty grades for creative printing, premium packaging, and unique stationery applications.</div>
+        <span class="product-tag">Specialty</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="section-eyebrow" style="color: var(--brass);">Why Choose Us</div>
+  <h2 class="section-title" style="color: var(--white);">Built for businesses that can't afford paper problems</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <div class="why-title">Reliable Sourcing Network</div>
+      <div class="why-desc">We work with reputed mills and authorised distributors, ensuring you get verified quality at fair trade prices — consistently.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <div class="why-title">Grade Consistency</div>
+      <div class="why-desc">Same GSM, same shade, same feel — every reorder. Your press settings don't need to change.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <div class="why-title">Stock Availability</div>
+      <div class="why-desc">Our Indore warehouse keeps popular grades ready to dispatch — so you're never held up waiting for stock.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-num">04</div>
+      <div class="why-title">Technical Support</div>
+      <div class="why-desc">Not sure which grade suits your job? Our team has hands-on knowledge of print production and can guide your choice.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PENKRAFT SISTER BRAND STRIP -->
+<div class="penkraft-strip">
+  <div class="penkraft-strip-left">
+    <span class="penkraft-strip-label">Our Associate Brand</span>
+    <div class="penkraft-strip-divider"></div>
+    <div>
+      <div class="penkraft-strip-name">Pen<span>kraft</span></div>
+      <div class="penkraft-strip-tagline">educationally your's &nbsp;·&nbsp; Notebooks for Indian students</div>
+    </div>
+  </div>
+  <a href="https://houseofpenkraft.com" target="_blank" rel="noopener noreferrer" class="penkraft-strip-link">Visit Penkraft →</a>
+</div>
+
+<!-- ENQUIRY STRIP -->
+<div class="enquiry-strip">
+  <div>
+    <h2>Ready to place a bulk order?</h2>
+    <p>Share your requirement — GSM, type, quantity — and we'll get back within 24 hours.</p>
+  </div>
+  <a href="#contact" class="btn-dark">Start an Enquiry</a>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-eyebrow">Get in Touch</div>
+  <h2 class="section-title" style="margin-bottom: 2.5rem;">Request a Quote or Enquire</h2>
+  <div class="contact-layout">
+    <div class="contact-form">
+      <div class="form-row">
+        <div>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Rajesh Sharma" />
+        </div>
+        <div>
+          <label for="company">Company / Firm</label>
+          <input type="text" id="company" placeholder="ABC Printers" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="rajesh@abcprinters.com" />
+        </div>
+      </div>
+      <div>
+        <label for="paper-type">Paper Type Required</label>
+        <select id="paper-type">
+          <option value="">Select a category</option>
+          <option>Maplitho / Offset</option>
+          <option>Art Paper / Art Card</option>
+          <option>Copier / Bond</option>
+          <option>Specialty Paper</option>
+          <option>Other / Not sure</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Requirement Details</label>
+        <textarea id="message" placeholder="GSM, quantity in reams / kg / tonnes, delivery location, timeline..."></textarea>
+      </div>
+      <button class="form-submit" onclick="(function(){
+        var name=document.getElementById('name').value.trim();
+        var company=document.getElementById('company').value.trim();
+        var phone=document.getElementById('phone').value.trim();
+        var email=document.getElementById('email').value.trim();
+        var paper=document.getElementById('paper-type').value;
+        var msg=document.getElementById('message').value.trim();
+        if(!name||!phone){alert('Please fill in your name and phone number.');return;}
+        var body='Name: '+name+'%0ACompany: '+company+'%0APhone: '+phone+'%0AEmail: '+email+'%0APaper Type: '+paper+'%0A%0ARequirement:%0A'+encodeURIComponent(msg);
+        window.location.href='mailto:shrinath.paper@gmail.com?subject=Paper Enquiry from '+encodeURIComponent(name)+'&body='+body;
+      })()">Send Enquiry</button>
+    </div>
+    <div class="contact-info">
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-title">Our Office</div>
+          <div class="contact-detail-val">Shrinath Papers, Indore, Madhya Pradesh — 452001</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-title">Call Us</div>
+          <div class="contact-detail-val">+91 88899 88824</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-title">Email</div>
+          <div class="contact-detail-val">shrinath.paper@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-title">Business Hours</div>
+          <div class="contact-detail-val">Monday – Saturday: 10:00 AM – 7:00 PM · Sunday: Closed</div>
+        </div>
+      </div>
+      <a href="https://maps.app.goo.gl/3rArzwvz8xmQkXUL6" target="_blank" rel="noopener noreferrer" class="map-link-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        View on Google Maps →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">SHRINATH <span style="color:var(--brass)">PAPERS</span></a>
+      <p>Your reliable paper trading partner and stationery manufacturer in Indore. Serving printers, publishers, and businesses across central India for 30+ years.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#products">Maplitho / Offset</a></li>
+        <li><a href="#products">Art Paper & Card</a></li>
+        <li><a href="#products">Copier & Bond</a></li>
+        <li><a href="#products">Specialty Paper</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Shrinath</a></li>
+        <li><a href="#contact">Contact & Quote</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Associate Brand</h4>
+      <ul>
+        <li><a href="https://houseofpenkraft.com" target="_blank" rel="noopener noreferrer">Penkraft →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Shrinath Papers. All rights reserved. · Indore, Madhya Pradesh</p>
+    <p style="font-size: 0.78rem;">Also see: <a href="https://houseofpenkraft.com" target="_blank" rel="noopener noreferrer" style="color: var(--brass); text-decoration: none;">Penkraft →</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
