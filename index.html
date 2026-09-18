@@ -163,6 +163,9 @@
     .footer-col a:hover { color: var(--warm-gray); }
     .footer-bottom { border-top: 1px solid rgba(200,194,182,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     .footer-bottom p { font-size: 0.8rem; color: var(--text-muted); }
+    .social-links { display: flex; gap: 0.75rem; align-items: center; }
+    .social-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(200,194,182,0.1); border: 1px solid rgba(200,194,182,0.15); color: var(--warm-gray); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+    .social-btn:hover { background: rgba(184,146,42,0.15); border-color: var(--brass); color: var(--brass-lt); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -402,7 +405,13 @@
       <div class="penkraft-strip-tagline">educationally your's &nbsp;·&nbsp; Notebooks for Indian students</div>
     </div>
   </div>
-  <a href="https://houseofpenkraft.com" target="_blank" rel="noopener noreferrer" class="penkraft-strip-link">Visit Penkraft →</a>
+  <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+    <a href="https://www.instagram.com/houseofpenkraft/" target="_blank" rel="noopener noreferrer" class="penkraft-strip-link" style="display:inline-flex;align-items:center;gap:0.35rem;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Instagram
+    </a>
+    <a href="https://houseofpenkraft.com" target="_blank" rel="noopener noreferrer" class="penkraft-strip-link">Visit Penkraft →</a>
+  </div>
 </div>
 
 <!-- ENQUIRY STRIP -->
@@ -545,7 +554,13 @@
   </div>
   <div class="footer-bottom">
     <p>© 2026 Shrinath Papers. All rights reserved. · Indore, Madhya Pradesh</p>
-    <p style="font-size: 0.78rem;">Also see: <a href="https://houseofpenkraft.com" target="_blank" rel="noopener noreferrer" style="color: var(--brass); text-decoration: none;">Penkraft →</a></p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/company/shrinathpapers/" target="_blank" rel="noopener noreferrer" class="social-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://houseofpenkraft.com" target="_blank" rel="noopener noreferrer" style="color: var(--brass); text-decoration: none; font-size: 0.78rem;">Also see: Penkraft →</a>
+    </div>
   </div>
 </footer>
 
